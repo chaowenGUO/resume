@@ -7,7 +7,4 @@ jobs:
         - uses: actions/checkout@v2
         - uses: docker://pandoc/core
           with:
-              args: |>
-                  -s
-                  -o resume.tex
-                  resume.html
+              args: -s -o resume.tex resume.html
