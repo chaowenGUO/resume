@@ -4,9 +4,10 @@ jobs:
     convert_via_pandoc:
         runs-on: ubuntu-latest
         steps:
+        - uses: actions/checkout@v2
         - uses: docker://pandoc/core
           with:
-              args: |
+              args: |>
                   -s
                   -o resume.tex
                   resume.html
