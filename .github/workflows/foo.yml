@@ -8,6 +8,6 @@ jobs:
         - uses: docker://pandoc/core
           with:
               args: -s index.html -o resume.tex 
-        - uses: mikeal/publish-to-github-action@v1
+        - uses: mikeal/publish-to-github-action@master
           env:
               GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
