@@ -4,10 +4,10 @@
 %
 \documentclass[
 ]{article}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -43,6 +43,9 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
 
 \author{}
 \date{}
@@ -187,16 +190,16 @@ Center, Telluride, CO, July 15-19, 2013
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Programming Language:} Java14, C++17/C, Python3(jupyter),
-  javascript(es6), Fortran, Cuda(gpgpu), HTML, CSS
+  \textbf{Programming Language:} Java, C++/C, Python3, javascript(es6),
+  Fortran, Cuda(gpgpu), HTML, CSS
 \item
-  \textbf{Operating System:} Unix/Linux, Windows, docker
+  \textbf{Operating System:} Unix/Linux, Windows, docker, kubernetes
 \item
   \textbf{Library:} MPI(Message Passing Interface with Multithread),
   Boost, MKL(Intel Math Kernel Library), BLAS, LAPACK, SCALAPACK,
   sklearn, pardiso, tensorflow
 \item
-  \textbf{Database:} Postgresql, pandas
+  \textbf{Database:} Postgresql, redis
 \item
   \textbf{Data Visualization:} matplotlib
 \end{itemize}
@@ -226,6 +229,9 @@ English; Mandarin Chinese; Cantonese
 
 \begin{itemize}
 \tightlist
+\item
+  website to mimic amazaon shopping mall
+  \href{https://web.chaowenguo.eu.org/}{https://web.chaowenguo.eu.org}
 \item
   video and audio p2p chat room
   \url{https://aiohttpp.herokuapp.com/chat.html}\\
