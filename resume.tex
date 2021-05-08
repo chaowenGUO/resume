@@ -230,20 +230,27 @@ English; Mandarin Chinese; Cantonese
 \begin{itemize}
 \tightlist
 \item
-  website to mimic amazaon shopping mall
-  \href{https://web.chaowenguo.eu.org/}{https://web.chaowenguo.eu.org}
+  cloudflare cdn to cache frontend page
 \item
-  video and audio p2p chat room
-  \url{https://aiohttpp.herokuapp.com/chat.html}\\
-  python, aiohttp, websocket, webrtc
+  backends are distributed into 6 linux virtual machine by round-robin
+  dns
 \item
-  video and audio p2p chat room
-  \url{https://sspringboot.herokuapp.com/chat.html}\\
-  java, spring boot, websocket, webrtc
+  two backends use nodejs koa, two backends use python aiohttp, two
+  backend use java vertx
 \item
-  video and audio p2p chat room
-  \url{https://koaa.herokuapp.com/chat.html}\\
-  nodejs, koa, websocket, webrtc
+  each individual backend use docker, cache with redis and fetch data
+  from postgresql
+\end{itemize}
+
+\begin{itemize}
+\tightlist
+\item
+  video and audio p2p chat room \url{https://chat.chaowenguo.eu.org}
+\item
+  implemented by websocket and webrtc
+\item
+  two backends use nodejs koa, two backends use python aiohttp, two
+  backend use java vertx
 \end{itemize}
 
 \hypertarget{references}{%
